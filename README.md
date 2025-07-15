@@ -1,6 +1,6 @@
 # Simple Website
 
-This is a simple website project with a dark gray background. Below are the details on how to set up and run the website.
+This is a simple website project designed to assist with common IT issues.
 
 ## Project Structure
 
