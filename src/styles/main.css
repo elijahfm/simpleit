@@ -81,21 +81,23 @@ footer {
 .sidebar-box:hover .sidebar-label {
     display: block;
 }
-/* ...existing code... */
+
 
 .article-box {
-    position: absolute;
-    left: 100px;
-    top: 170px; /* Adjust as needed */
+    position: fixed;
+    top: 200px;      /* Adjust as needed */
+    left: 120px;    /* Adjust as needed */
     background: #222;
     color: #fff;
     border-radius: 8px;
-    padding: 18px 18px 12px 18px;
+    padding: 18px 24px 18px 24px;
     box-shadow: 0 2px 12px rgba(0,0,0,0.18);
-    min-width: 260px;
+    min-width: 340px;
+    max-width: 480px;
     z-index: 100;
 }
 
+/* ...existing code... */
 .article-box textarea {
     width: 100%;
     border-radius: 4px;
@@ -154,4 +156,14 @@ footer {
 
 .sidebar-box:hover {
     z-index: 10001; /* Only the hovered box is brought to the front */
+}
+.main-layout {
+    display: flex;
+    align-items: flex-start;
+    position: relative;
+}
+
+.sidebar-boxes {
+    flex-shrink: 0;
+    margin-right: 30px;
 }
