@@ -85,8 +85,8 @@ footer {
 
 .article-box {
     position: fixed;
-    top: 200px;      /* Adjust as needed */
-    left: 120px;    /* Adjust as needed */
+    top: 200px;      
+    left: 120px;    
     background: #222;
     color: #fff;
     border-radius: 8px;
@@ -97,7 +97,7 @@ footer {
     z-index: 100;
 }
 
-/* ...existing code... */
+
 .article-box textarea {
     width: 100%;
     border-radius: 4px;
@@ -122,12 +122,12 @@ footer {
     background: #388e3c;
 }
 
-/* ...existing code... *//* ...existing code... */
+
 
 .sidebar-box {
     position: relative;
     cursor: pointer;
-    z-index: 1; /* Ensure stacking context */
+    z-index: 1; 
 }
 
 .sidebar-label {
@@ -142,11 +142,11 @@ footer {
     border-radius: 6px;
     white-space: nowrap;
     font-size: 15px;
-    z-index: 9999; /* Bring label to the front */
+    z-index: 9999; 
     box-shadow: 0 2px 8px rgba(0,0,0,0.15);
 }
 
-/* ...existing code... */
+
 
 .sidebar-box {
     position: relative;
@@ -155,7 +155,7 @@ footer {
 }
 
 .sidebar-box:hover {
-    z-index: 10001; /* Only the hovered box is brought to the front */
+    z-index: 10001;
 }
 .main-layout {
     display: flex;
