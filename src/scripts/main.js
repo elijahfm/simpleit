@@ -19,8 +19,25 @@ const helpArticles = {
             <li>Click "Ok" to confirm and delete cache.</li>
         </ol>
     `,
-    "Microsoft Office": "Try repairing the Office installation from Control Panel.",
-    "Windows": "Restart your PC and check for updates in Settings."
+    "Microsoft Office": `
+        <strong>Clearing your cache:</strong>
+        <ol>
+            <li>In the Microsoft application open up "File" in top left</li>
+            <li>Go to the options near the bottom of the side menu.</li>
+            <li>Go to the "Save" tab and then "Cache Settings"</li>
+            <li>Click tab option "Delete cached files" near the bottom.</li>
+        </ol>
+    `, 
+    "Windows": `
+        <strong>Updating Windows:</strong>
+        <ol>
+            <li>In the bottom of the screen navigate to the Windows seach function.</li>
+            <li>Search for "Windows Update Settings" and click the app.</li>
+            <li>Click the "Check for updates" button.</li>
+            <li>Follow the prompts to install any updates.</li>
+            <li>Restart your computer if prompted.</li>
+        </ol>
+    `,
 };
 
 document.querySelectorAll('.sidebar-box').forEach(box => {
