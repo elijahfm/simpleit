@@ -167,3 +167,26 @@ footer {
     flex-shrink: 0;
     margin-right: 30px;
 }
+/* Add to your main.css */
+.clear-cache-btn-article {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    z-index: 2;
+}
+.clear-cache-btn-article:hover {
+    background: #1565c0;
+}
+.article-box {
+    position: fixed;
+    /* ...existing styles... */
+    /* Add this if not present: */
+    overflow: hidden;
+}
