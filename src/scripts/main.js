@@ -31,6 +31,7 @@ const helpArticles = {
         </ol>
     `,
     "Microsoft Office": `
+        <button class="clear-cache-btn-article office" onclick="clearOfficeCache()" title="Clear Cache">Clear Cache</button>
         <strong>Clearing your cache:</strong>
         <ol>
             <li>In the Microsoft application open up "File" in top left</li>
@@ -84,4 +85,9 @@ function clearCache() {
     } else {
         alert("Cache API not supported.");
     }
+}
+function clearOfficeCache() {
+    alert("This would run your Microsoft Office cache clearing script.");
+    // You cannot run Python directly from the browser.
+    // You could provide instructions or trigger a download of the script if needed.
 }
