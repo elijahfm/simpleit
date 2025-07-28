@@ -37,9 +37,9 @@ const helpArticles = {
             <li>In the Microsoft application open up "File" in top left</li>
             <li>Go to the options near the bottom of the side menu.</li>
             <li>Go to the "Save" tab and then "Cache Settings"</li>
-            <li>Click tab option "Delete cached files" near the bottom.</li>
+            li>Click tab option "Delete cached files" near the bottom.</li>
         </ol>
-    `,
+`,
     "Windows": `
         <strong>Updating Windows:</strong>
         <ol>
@@ -87,7 +87,8 @@ function clearCache() {
     }
 }
 function clearOfficeCache() {
-    alert("This would run your Microsoft Office cache clearing script.");
-    // You cannot run Python directly from the browser.
-    // You could provide instructions or trigger a download of the script if needed.
+    fetch('/clear-office-cache', { method: 'POST' })
+        .then(res => res.text())
+        .then(msg => alert(msg))
+        .catch(err => alert('Failed to clear Office cache.'));
 }
