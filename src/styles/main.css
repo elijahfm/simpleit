@@ -189,3 +189,29 @@ footer {
 .clear-cache-btn-article.office:hover {
     background: #388e3c;
 }
+.update-windows-btn-article {
+    position: absolute;
+    top: 12px;
+    right: 18px;
+    background: #1976d2;
+    color: #fff;
+    border: none;
+    border-radius: 4px;
+    padding: 4px 12px;
+    font-size: 13px;
+    cursor: pointer;
+    z-index: 2;
+}
+.update-windows-btn-article:hover {
+    background: #1565c0;
+}
+.article-box {
+    position: fixed;
+    overflow: hidden;
+}
+.update-windows-btn-article.windows {
+    background: #4caf50;
+}
+.update-windows-btn-article.windows:hover {
+    background: #388e3c;
+}

@@ -37,11 +37,12 @@ const helpArticles = {
             <li>In the Microsoft application open up "File" in top left</li>
             <li>Go to the options near the bottom of the side menu.</li>
             <li>Go to the "Save" tab and then "Cache Settings"</li>
-            li>Click tab option "Delete cached files" near the bottom.</li>
+            <li>Click tab option "Delete cached files" near the bottom.</li>
         </ol>
-`,
+    `,
     "Windows": `
         <strong>Updating Windows:</strong>
+        <button class="update-windows-btn-article windows" onclick="updatewindows()" title="Update Windows">Update Windows</button>
         <ol>
             <li>In the bottom of the screen navigate to the Windows search function.</li>
             <li>Search for "Windows Update Settings" and click the app.</li>
@@ -91,4 +92,10 @@ function clearOfficeCache() {
         .then(res => res.text())
         .then(msg => alert(msg))
         .catch(err => alert('Failed to clear Office cache.'));
+}
+function updatewindows() {
+    fetch('/run-windows-update', { method: 'POST' })
+        .then(res => res.text())
+        .then(msg => alert(msg))
+        .catch(err => alert('Error running update: ' + err));
 }

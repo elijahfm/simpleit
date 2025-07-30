@@ -37,3 +37,15 @@ app.post('/clear-office-cache', (req, res) => {
     res.send('Office cache cleared successfully.');
   });
 });
+app.post('/run-windows-update', (req, res) => {
+  const scriptPath = path.join(__dirname, 'src', 'python', 'run_windows_update.py');
+
+  exec(`python "${scriptPath}"`, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`❌ Update error: ${error.message}`);
+      return res.status(500).send('Failed to start Windows Update.');
+    }
+    console.log(`✅ Update script output: ${stdout}`);
+    res.send('Windows Update scan started.');
+  });
+});
