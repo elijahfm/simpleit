@@ -1,14 +1,11 @@
 import os
 import shutil
 
-# Get the path to the Teams cache directory
 teams_cache_path = os.path.expandvars(r"%APPDATA%\Microsoft\Teams")
 
-# Check if the path exists
 if os.path.exists(teams_cache_path):
     print(f"Found Teams cache at: {teams_cache_path}")
     
-    # Loop through all items in the directory and delete them
     for item in os.listdir(teams_cache_path):
         item_path = os.path.join(teams_cache_path, item)
         try:

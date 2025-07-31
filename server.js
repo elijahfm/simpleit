@@ -5,10 +5,8 @@ const path = require('path');
 const app = express();
 const PORT = 3000;
 
-// Serve your entire src/ folder statically
 app.use(express.static(path.join(__dirname, 'src')));
 
-// API route to trigger Teams cache clearing
 app.post('/clear-teams-cache', (req, res) => {
   const pythonScriptPath = path.join(__dirname, 'src', 'python', 'clear_teams_cache.py');
 

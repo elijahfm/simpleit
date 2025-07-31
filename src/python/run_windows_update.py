@@ -2,7 +2,6 @@ import subprocess
 import sys
 
 try:
-    # This command tells Windows to check for updates via usoclient.exe
     result = subprocess.run(
         ["powershell", "-Command", "Start-Process usoclient -ArgumentList 'StartScan' -Verb runAs"],
         capture_output=True,

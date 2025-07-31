@@ -53,7 +53,6 @@ const helpArticles = {
     `,
 };
 
-// When setting article content, use innerHTML
 document.querySelectorAll('.sidebar-box').forEach(box => {
     box.addEventListener('click', function(e) {
         e.stopPropagation();
@@ -65,15 +64,10 @@ document.querySelectorAll('.sidebar-box').forEach(box => {
     });
 });
 
-// ...rest of your code...
-
-
-// Checking to see if hiding body is ok
 document.body.addEventListener('click', function() {
     document.getElementById('article-box').style.display = 'none';
 });
 
-// Prevents closing article box when clicked
 document.getElementById('article-box').addEventListener('click', function(e) {
     e.stopPropagation();
 });
