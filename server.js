@@ -47,3 +47,16 @@ app.post('/run-windows-update', (req, res) => {
     res.send('Windows Update scan started.');
   });
 });
+
+app.post('/clear-java-cache', (req, res) => {
+  const scriptPath = path.join(__dirname, 'src', 'python', 'clear_java_cache.py');
+
+  exec(`python "${scriptPath}"`, (error, stdout, stderr) => {
+    if (error) {
+      console.error(`❌ Java clear error: ${error.message}`);
+      return res.status(500).send('Failed to clear Java cache.');
+    }
+    console.log(`✅ Java clear output: ${stdout}`);
+    res.send('Java cache cleared successfully.');
+  });
+});

@@ -21,6 +21,7 @@ const helpArticles = {
     `,
     "Java App": `
         <strong>Clearing your cache:</strong>
+        <button class="clear-cache-btn-article" onclick="clearJavaCache()" title="Clear Java Cache">Clear Cache</button>
         <ol>
             <li>In the bottom of the screen go to the Windows search function.</li>
             <li>Search for "Configure Java" and click the app.</li>
@@ -31,8 +32,8 @@ const helpArticles = {
         </ol>
     `,
     "Microsoft Office": `
-        <button class="clear-cache-btn-article office" onclick="clearOfficeCache()" title="Clear Cache">Clear Cache</button>
         <strong>Clearing your cache:</strong>
+        <button class="clear-cache-btn-article office" onclick="clearOfficeCache()" title="Clear Cache">Clear Cache</button>
         <ol>
             <li>In the Microsoft application open up "File" in top left</li>
             <li>Go to the options near the bottom of the side menu.</li>
@@ -92,4 +93,11 @@ function updatewindows() {
         .then(res => res.text())
         .then(msg => alert(msg))
         .catch(err => alert('Error running update: ' + err));
+}
+
+function clearJavaCache() {
+    fetch('/clear-java-cache', { method: 'POST' })
+        .then(res => res.text())
+        .then(msg => alert(msg))
+        .catch(err => alert('Failed to clear Java cache.'));
 }
