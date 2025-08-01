@@ -7,34 +7,50 @@ This is a simple website project designed to assist with common IT issues.
 ```
 simple-website
 ├── src
-│   ├── index.html       # Main HTML document
-│   ├── styles
-│   │   └── main.css     # CSS styles for the website
-│   └── scripts
-│       └── main.js      # JavaScript for interactive features
-└── README.md            # Project documentation
+│   ├── images
+│   ├── python
+│   │   └── clear_java_cache.py
+│   │   └── clear_teams_cache.py
+│   │   └── run_windows_update.py
+│   ├── scripts
+│   │   └── main.js
+│   └── styles
+│   │   └── main.css
+│   └── index.html
+└── README.md
+└── server.js
+└── package-lock.json
+└── package.json
 ```
 
-## Getting Started
+## Purpose
 
-To get started with this project, follow these steps:
+A common-practice troubleshooting guide made simple to solve a majority of computer and app related issues.
 
-1. **Clone the repository** (if applicable):
-   ```
-   git clone <repository-url>
-   ```
+1. Streamlines IT tasks
+2. Provides self-help content right next to actionable scripts
+3. Ensures safer script execution by being offline and local-only
 
-2. **Navigate to the project directory**:
-   ```
-   cd simple-website
-   ```
+## Setup and Usage
 
-3. **Open the `index.html` file** in your web browser:
-   - You can simply double-click the `src/index.html` file or open it using your preferred web server.
+- Requirements
+   - Node.js (v18+ recommended)
+   - Python 3.x installed and in ```PATH```
 
-## Customization
+- Installation
+```bash
+git clone https://github.com/elijahfm/simpleit.git
+cd simpleit
+npm install
+```
+- Running the App
+```bash
+node server.js
+```
 
-- You can modify the styles in `src/styles/main.css` to change the appearance of the website.
+## Security Notes
+
+- The app is *designed for local use only* - do not expose to the internet (opening firewall, hosting on cloud, bind node to server without restricting access)
 - Add any interactive features in `src/scripts/main.js`.
 
 ## License
