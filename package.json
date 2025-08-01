@@ -1,5 +1,5 @@
 {
-  "name": "simple-website",
+  "name": "simpleit",
   "version": "1.0.0",
   "description": "This is a simple website project designed to assist with common IT issues.",
   "main": "index.js",
@@ -8,15 +8,15 @@
   },
   "repository": {
     "type": "git",
-    "url": "git+https://github.com/elijahfm/itproject.git"
+    "url": "git+https://github.com/elijahfm/simpleit.git"
   },
   "keywords": [],
   "author": "",
   "license": "ISC",
   "bugs": {
-    "url": "https://github.com/elijahfm/itproject/issues"
+    "url": "https://github.com/elijahfm/simpleit/issues"
   },
-  "homepage": "https://github.com/elijahfm/itproject#readme",
+  "homepage": "https://github.com/elijahfm/simpleit#readme",
   "dependencies": {
     "express": "^5.1.0"
   }
